@@ -1,0 +1,58 @@
+<div class="col-md-9">
+<div class="row">
+	<div class="col-md-offset-1">
+		<form class="reg-page">
+			<div class="reg-header">
+				<h2>{{createoredit}} Organization</h2>
+			</div>
+
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span> <input
+					type="text" ng-model="currentOrg.name" placeholder="Name of Organization"
+					class="form-control">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+					<select  ng-model="currentOrg.orgType" placeholder="orgType" class="form-control">
+					
+					<!--  TODO: placing static details for now   -->
+					
+					<option value="COLLEGE">COLLEGE</option>
+					<option value="COMPANY">COMPANY</option>
+					<option value="GOVERMENT_PROJECT">GOVERMENT_PROJECT</option>
+				</select>
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span> <input
+					type="text" ng-model="currentOrg.address.addressline1" placeholder="Address Line 1"
+					class="form-control">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span> <input
+					type="text" ng-model="currentOrg.address.addressline2" placeholder="Address Line 2"
+					class="form-control">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span> <input
+					type="text" ng-model="currentOrg.address.pincode" placeholder="Pincode"
+					class="form-control">
+			</div>
+			<div class="input-group margin-bottom-20">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span> <input
+					type="text" ng-model="currentOrg.maxStudents" placeholder="Maximum number of Students"
+					class="form-control">
+			</div>
+			<div class="row">
+				
+				<div class="col-md-6">
+					<button ng-click="doCreateUpdate()" class="btn-u pull-right">Submit</button>
+				</div>
+			</div>
+
+			<hr>
+
+			
+		</form>
+	</div>
+</div>
+</div>

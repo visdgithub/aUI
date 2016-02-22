@@ -1,0 +1,48 @@
+<div class="col-md-9">
+	<div class="panel panel-green margin-bottom-40">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<i class="fa fa-tasks"></i>Users
+			</h3>
+		</div>
+		<div class="panel-body">
+			<p>List of what you selected</p>
+			<button class="label label-info pull-right"
+				ui-sref="app.main.manage.createUser">Add New User</button>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>User Type</th>
+					<!--
+            <th class="hidden-sm">Type</th>-->
+					<th>Organization</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+
+				<tr ng-repeat="user in listOfUser">
+					<td>{{$index}}</td>
+					<td>{{user.name}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.mobile}}</td>
+					<td>{{user.userType}}</td>
+					<!--
+            <td class="hidden-sm">Web Design</td>-->
+					<td></td>
+					<td><button ng-click="handleUserListEdit($index)"
+							class="btn btn-warning btn-xs">
+							<i class="fa fa-pencil"></i>Edit
+						</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

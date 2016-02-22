@@ -1,0 +1,104 @@
+<html lang="en" class=" js cssanimations csstransitions" ng-app="istarcms"><!--<![endif]--><head>
+    <title>Unify - Responsive Website Template</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+   <!-- <link rel="shortcut icon" href="favicon.ico">-->
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+    
+	
+	
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+    <link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style id="__web-inspector-hide-shortcut-style__" type="text/css">
+        .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+        {
+            visibility: hidden !important;
+        }
+    </style>
+
+    <!-- ================== BEGIN BASE ANGULAR JS ================== -->
+    <script src="assets/plugins/angular/angular.min.js"></script>   
+    <script src="assets/plugins/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="assets/plugins/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="assets/plugins/angular-cookies/angular-cookies.min.js"></script>
+     <script src="assets/plugins/angular-ui-router-styles/ui-router-styles.js"></script>
+    <!-- ================== END BASE ANGULAR JS ================== -->
+
+</head>
+
+<body ng-controller="appController"  ui-router-styles>
+
+<div ui-view></div>
+<!--/style-switcher-->
+<!--=== End Style Switcher ===-->
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="assets/plugins/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery/dist/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!-- JS Page Level -->
+	<script type="text/javascript" src="assets/js/app_legacy.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/owl-recent-works.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			 App_legacy.init();
+			StyleSwitcher.initStyleSwitcher();
+			OwlRecentWorks.initOwlRecentWorksV1();
+		});
+	</script>
+	
+<!---->
+<!--Angular-->
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/constantsConfig.js"></script>
+<script src="assets/js/routerConfig.js"></script>
+
+<script src="assets/js/directives/CopyrightDirective.js"></script>
+
+<!-- ================== Rules and cofigs ================== -->
+<script src="assets/js/utilities/FindInJSON.js"></script>
+<script src="assets/js/services/CookieManager.js"></script>
+<script src="assets/js/surrounders/UserService.js"></script>
+<script src="assets/js/surrounders/RouteRules.js"></script>
+
+<script src="assets/js/controllers/HeaderController.js"></script>
+<script src="assets/js/controllers/SidebarController.js"></script>
+<script src="assets/js/services/BackendServices.js"></script>
+<script src="assets/js/services/APIs.js"></script>
+
+<script src="assets/js/services/OnboardingServices.js"></script>
+
+<script src="assets/js/controllers/RegisterationPageController.js"></script>
+
+
+
+<div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 0; cursor: pointer;"></div></body></html>

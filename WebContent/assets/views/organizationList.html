@@ -1,0 +1,40 @@
+<div class="col-md-9">
+	<div class="panel panel-green margin-bottom-40">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<i class="fa fa-tasks"></i>Organizations
+			</h3>
+		</div>
+		<div class="panel-body">
+			<p>List of what you selected</p>
+			<button class="label label-info pull-right"
+				ui-sref="app.main.manage.createOrg">Add New Organization</button>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Organization Type</th>
+					<th>MAX Students</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+
+				<tr ng-repeat="org in listOfOrgs">
+					<td>{{$index}}</td>
+					<td>{{org.name}}</td>
+					<td>{{org.orgType}}</td>
+					<td>{{org.maxStudents}}</td>
+					<td><button ng-click="handleOrgListEdit($index)"
+							class="btn btn-warning btn-xs">
+							<i class="fa fa-pencil"></i>Edit
+						</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
