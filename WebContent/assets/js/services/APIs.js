@@ -9,9 +9,10 @@ angular.module('istarcms').constant('APP_API', {
     resetPassword: "istarUI/auth/resetPassword",
     createUser: "istarUI/createUser",
     createCompanyOrganization: "istarUI/organization/createOrg",
-    createGovernmentOrganization: "",
-    createCollegeOrganization: "",
+    createGovernmentOrganization: "istarUI/organization/createOrg",
+    createCollegeOrganization: "istarUI/organization/createOrg",
     createOrg: "istarUI/organization/createOrg",
     getUserList: "istarUI/userlistcontroller",
-    getOrganizationList: "istarUI/orglist"
+    getOrganizationList: "istarUI/orglist",
+    updateOrg:"istarUI/OrgUpdateController"	
 });

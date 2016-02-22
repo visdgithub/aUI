@@ -14,11 +14,11 @@ angular.module('istarcms').constant('USER_TYPE', {
 
 angular.module('istarcms').constant('ORG_TYPE', {
     COMPANY: "COMPANY",
-    GOVERNMENT: "GOVERNMENT_PROJECT",
+    GOVERNMENT: "GOVERMENT_PROJECT",
     COLLEGE: "COLLEGE"
-})
+});
 
-angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q', 'USER_TYPE', 'ORG_TYPE', function (BackendService, APP_CONSTANTS, $q, USER_TYPE, ORG_TYPE) {
+angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q', 'USER_TYPE', 'ORG_TYPE', function (BackendService, $q, USER_TYPE, ORG_TYPE) {
     function serviceInstance() {
         var services = {
             userInfo: {},
@@ -36,7 +36,9 @@ angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q'
             setUserList: setUserList,
             listOfUsers: {},
             setOrganizationList: setOrganizationList,
-            listOfOrganizations: {}
+            listOfOrganizations: {},
+            USER_TYPE: USER_TYPE,
+            ORG_TYPE: ORG_TYPE,
            /* setListOfUsersInOrganization: setListOfUsersInOrganization,
             getCurrentUserDetails: getCurrentUserDetails,
             getCurrentOrganizationDetails: getCurrentOrganizationDetails,
@@ -129,13 +131,13 @@ angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q'
     };
 
     function createOrganization(params){
-        if (params.orgType == ORG_TYPE.COMPANY){
+        if (params.orgType == this.ORG_TYPE.COMPANY){
             createCompanyOrganization(params);
 
-        }else if (params.orgType  == ORG_TYPE.GOVERNMENT){
+        }else if (params.orgType  == this.ORG_TYPE.GOVERNMENT){
             createGovernmentOrganization(params);
 
-        }else if (params.orgType  == ORG_TYPE.COLLEGE){
+        }else if (params.orgType  == this.ORG_TYPE.COLLEGE){
             createCollegeOrganization(params);
         }
     };
@@ -153,7 +155,7 @@ angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q'
         return BackendService.doCommunication(BackendService.API.createCompanyOrganization, params, "GET").then(function (data) {
             var result = BackendService.parseBackendResponse(data);
             if (result.type == BackendService.toasterFriendlyCode.S) {
-                alert(result.summaryMessages + " : " + result.detailedMessage);
+                alert("Created");
             } else if (result.type == BackendService.toasterFriendlyCode.F) {
                 alert(result.summaryMessages + " : " + result.detailedMessage);
             }
@@ -175,10 +177,10 @@ angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q'
             pincode: params.pincode
         };
 
-        return BackendService.doCommunication(BackendService.API.createCompanyOrganization, params, "GET").then(function (data) {
+        return BackendService.doCommunication(BackendService.API.createGovernmentOrganization, params, "GET").then(function (data) {
             var result = BackendService.parseBackendResponse(data);
             if (result.type == BackendService.toasterFriendlyCode.S) {
-                alert(result.summaryMessages + " : " + result.detailedMessage);
+                alert("Created");
             } else if (result.type == BackendService.toasterFriendlyCode.F) {
                 alert(result.summaryMessages + " : " + result.detailedMessage);
             }
@@ -200,10 +202,10 @@ angular.module('istarcms').service('OnboardingServices', ['BackendService', '$q'
             pincode: params.pincode
         };
 
-        return BackendService.doCommunication(BackendService.API.createCompanyOrganization, params, "GET").then(function (data) {
+        return BackendService.doCommunication(BackendService.API.createCollegeOrganization, params, "GET").then(function (data) {
             var result = BackendService.parseBackendResponse(data);
             if (result.type == BackendService.toasterFriendlyCode.S) {
-                alert(result.summaryMessages + " : " + result.detailedMessage);
+                alert("Created");
             } else if (result.type == BackendService.toasterFriendlyCode.F) {
                 alert(result.summaryMessages + " : " + result.detailedMessage);
             }

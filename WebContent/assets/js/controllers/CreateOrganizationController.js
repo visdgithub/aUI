@@ -2,21 +2,16 @@ angular.module('istarcms').controller('CreateOrganizationController', function (
     $scope.createoredit = "Create";
 
     $scope.doCreateUpdate = function () {
-      /*  var params = {
-            companyName:$scope.orgname,
-            orgType:$scope.orgType,
-            addressline1:$scope.addressline1,
-            addressline2:$scope.addressline2,
-            pincode:$scope.pincode,
-            maxStudents:$scope.maxstudent
-
+        var params = {
+            companyName:$scope.currentOrg.name,
+            orgType:$scope.currentOrg.orgType,
+            addressline1:$scope.currentOrg.address.addressline1,
+            addressline2:$scope.currentOrg.address.addressline2,
+            pincode:$scope.currentOrg.address.pincode,
+            maxStudents:$scope.currentOrg.maxStudents
         };
 
         OnboardingServices.createOrganization(params).then(function(){
-            alert('created');
-        })*/
-
-        alert("wired create user controoelr");
-
+        });
     };
 });

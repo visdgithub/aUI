@@ -6,8 +6,18 @@
 			</h3>
 		</div>
 		<div class="panel-body">
-			<p>List of what you selected</p>
-			<button class="label label-info pull-right"
+			<p>
+				List of what you selected
+				<section>
+					<label class="select"> <select name="Org"
+						ng-options="option.value as option.name for option in orgtypes"
+						ng-model="selectedItem" ng-change="handleOrgListOption()" class="form-control">
+					</select> <i></i>
+					</label>
+				</section>
+
+			</p>
+			<button class="label label-info c"
 				ui-sref="app.main.manage.createOrg">Add New Organization</button>
 		</div>
 		<table class="table">
